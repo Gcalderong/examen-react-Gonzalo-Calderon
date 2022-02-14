@@ -19,7 +19,7 @@ class Ejercicio1 extends React.Component {
               <li>
                 La barra de navegación implementa el componente de
                 React-Bootstrap{' '}
-                <a href="https://react-bootstrap.github.io/components/navbar/#offcanvas">
+                <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png">
                   Offcanvas
                 </a>{' '}
                 <b> - 1 punto</b>

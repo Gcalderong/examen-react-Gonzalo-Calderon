@@ -7,8 +7,9 @@ import BootstrapHeader from './components/BootstrapHeader';
 
 function App() {
   return (
-    <BootstrapHeader />
+    
     <div>
+      <BootstrapHeader />
       <h1>Desarrollo de Interfaces: Examen React.js</h1>
       <p>
         Resuelve los ejercicios propuestos. Para ello, haz un fork de este
@@ -16,9 +17,6 @@ function App() {
         examen. El repositorio debe tener el nombre
         examen-react-Nombre-Apellido1, donde nombre y apellido son los tuyos.
       </p>
-      <Ejercicio1 />
-      <Ejercicio2 />
-      <Ejercicio3 />
     </div>
   );
 }

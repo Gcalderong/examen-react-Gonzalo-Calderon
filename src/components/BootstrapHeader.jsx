@@ -1,8 +1,15 @@
 import React from 'react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { MenuItems } from '../data/MenuItems';
-import './header.css';
+import {
+  Navbar,
+  Container,
+  Nav,
+  Form,
+  FormControl,
+  Button,
+  Offcanvas,
+  NavDropdown,
+} from 'react-bootstrap';
+
 
 class BootstrapHeader extends React.Component {
   constructor(props) {
@@ -11,42 +18,36 @@ class BootstrapHeader extends React.Component {
 
   render() {
     return (
-      <Navbar bg="light" expand="lg">
+      <>
+       <Navbar bg="light" expand={false}>
   <Container fluid>
-    <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
-    <Navbar.Toggle aria-controls="navbarScroll" />
-    <Navbar.Collapse id="navbarScroll">
-      <Nav
-        className="me-auto my-2 my-lg-0"
-        style={{ maxHeight: '100px' }}
-        navbarScroll
-      >
-        <Nav.Link href="#action1">Home</Nav.Link>
-        <Nav.Link href="#action2">Link</Nav.Link>
-        <NavDropdown title="Link" id="navbarScrollingDropdown">
-          <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-          <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="#action5">
-            Something else here
-          </NavDropdown.Item>
-        </NavDropdown>
-        <Nav.Link href="#" disabled>
-          Link
-        </Nav.Link>
-      </Nav>
-      <Form className="d-flex">
-        <FormControl
-          type="search"
-          placeholder="Search"
-          className="me-2"
-          aria-label="Search"
-        />
-        <Button variant="outline-success">Search</Button>
-      </Form>
-    </Navbar.Collapse>
+  <Navbar.Brand href="#home">
+              <img
+                className="logo-image"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/1200px-React.svg.png"
+              />
+              <i className="fas fa-user-graduate" />
+            </Navbar.Brand>
+    <Navbar.Toggle aria-controls="offcanvasNavbar" />
+    <Navbar.Offcanvas
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+      placement="end"
+    >
+      <Offcanvas.Header closeButton>
+        <Offcanvas.Title id="offcanvasNavbarLabel">Diferentes ejercicios</Offcanvas.Title>
+      </Offcanvas.Header>
+      <Offcanvas.Body>
+        <Nav className="justify-content-end flex-grow-1 pe-3">
+          <Nav.Link href="#action1">Ejercicio1</Nav.Link>
+          <Nav.Link href="#action2">Ejercicio2</Nav.Link>
+          <Nav.Link href="#action2">Ejercicio3</Nav.Link>
+        </Nav>
+      </Offcanvas.Body>
+    </Navbar.Offcanvas>
   </Container>
 </Navbar>
+      </>
     );
   }
 }
