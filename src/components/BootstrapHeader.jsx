@@ -3,12 +3,11 @@ import {
   Navbar,
   Container,
   Nav,
-  Form,
-  FormControl,
-  Button,
   Offcanvas,
-  NavDropdown,
 } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import {PaginasApp } from '../data/PaginasApp';
+import './header.css';
 
 
 class BootstrapHeader extends React.Component {
@@ -34,12 +33,10 @@ class BootstrapHeader extends React.Component {
       aria-labelledby="offcanvasNavbarLabel"
       placement="end"
     >
-      <Offcanvas.Header closeButton>
-        <Offcanvas.Title id="offcanvasNavbarLabel">Diferentes ejercicios</Offcanvas.Title>
-      </Offcanvas.Header>
+
       <Offcanvas.Body>
-        <Nav className="justify-content-end flex-grow-1 pe-3">
-          <Nav.Link href="#action1">Ejercicio1</Nav.Link>
+     < Nav className="justify-content-end flex-grow-1 pe-3">
+          <Nav.Link href="#">Ejercicio1</Nav.Link>
           <Nav.Link href="#action2">Ejercicio2</Nav.Link>
           <Nav.Link href="#action2">Ejercicio3</Nav.Link>
         </Nav>
